@@ -329,6 +329,58 @@ li + li {
   font-weight: 700;
 }
 
+.skill-category-grid,
+.experience-showcase,
+.capability-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.skill-category-grid,
+.capability-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.experience-showcase {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 1rem;
+}
+
+.skill-category,
+.capability-card {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(19, 45, 77, 0.72), rgba(12, 29, 50, 0.82));
+}
+
+.skill-category h3,
+.infrastructure-card h3,
+.capability-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.skill-category p,
+.infrastructure-card p,
+.capability-card p {
+  color: var(--text-muted);
+}
+
+.skill-category p,
+.capability-card p {
+  margin: 0.75rem 0 0;
+}
+
+.infrastructure-card {
+  box-shadow: var(--shadow);
+}
+
+.infrastructure-card p:not(.eyebrow) {
+  margin: 0.85rem 0 0;
+}
+
 .timeline {
   position: relative;
   display: grid;
@@ -465,9 +517,8 @@ li + li {
 .project-media img {
   display: block;
   width: 100%;
-  height: 100%;
-  min-height: 280px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .project-media figcaption {
@@ -608,6 +659,9 @@ li + li {
 
   .project-grid,
   .github-project-grid,
+  .skill-category-grid,
+  .experience-showcase,
+  .capability-grid,
   .cert-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -684,6 +738,9 @@ li + li {
 
   .project-grid,
   .github-project-grid,
+  .skill-category-grid,
+  .experience-showcase,
+  .capability-grid,
   .cert-grid {
     grid-template-columns: 1fr;
   }
